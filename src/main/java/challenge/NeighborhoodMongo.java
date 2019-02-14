@@ -2,13 +2,14 @@ package challenge;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.geo.GeoJsonPolygon;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * Classe para mapear o bairro no MongoDB
- *
- */
+import java.lang.annotation.Documented;
 
+@Document(collection = "neighborhood")
 public class NeighborhoodMongo {
+
+    // Properties
 
     @Id
     private String id;
@@ -16,6 +17,15 @@ public class NeighborhoodMongo {
     private String name;
 
     private GeoJsonPolygon polygon;
+
+    // Constructor
+
+    public NeighborhoodMongo(String name, GeoJsonPolygon polygon) {
+        this.name = name;
+        this.polygon = polygon;
+    }
+
+    // Methods
 
     public String getId() {
         return id;
@@ -27,10 +37,6 @@ public class NeighborhoodMongo {
 
     public GeoJsonPolygon getPolygon() {
         return polygon;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public void setName(String name) {
