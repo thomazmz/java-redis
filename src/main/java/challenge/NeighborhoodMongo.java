@@ -16,13 +16,13 @@ public class NeighborhoodMongo {
 
     private String name;
 
-    private GeoJsonPolygon polygon;
+    private GeoJsonPolygon geometry;
 
     // Constructor
 
-    public NeighborhoodMongo(String name, GeoJsonPolygon polygon) {
+    public NeighborhoodMongo(String name, GeoJsonPolygon geometry) {
         this.name = name;
-        this.polygon = polygon;
+        this.geometry = geometry;
     }
 
     // Methods
@@ -35,15 +35,15 @@ public class NeighborhoodMongo {
         return name;
     }
 
-    public GeoJsonPolygon getPolygon() {
-        return polygon;
+    public GeoJsonPolygon getGeometry() {
+        return geometry;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setPolygon(GeoJsonPolygon polygon) {
-        this.polygon = polygon;
+    public void setPolygon(GeoJsonPolygon geometry) {
+        this.geometry = geometry;
     }
 }

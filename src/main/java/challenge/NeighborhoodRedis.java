@@ -16,14 +16,14 @@ public class NeighborhoodRedis {
     private List<RestaurantRedis> restaurants;
 
     // Constructors
+    public NeighborhoodRedis() {
+
+    }
 
     public NeighborhoodRedis(String name) {
         this.name = name;
     }
 
-    public NeighborhoodRedis(List<RestaurantRedis> restaurants) {
-        this.restaurants = restaurants;
-    }
 
     // Methods
 

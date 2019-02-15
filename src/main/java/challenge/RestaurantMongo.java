@@ -12,14 +12,14 @@ public class RestaurantMongo {
     @Id
     private String id;
 
-    private GeoJsonPoint point;
+    private GeoJsonPoint location;
 
     private String name;
 
     // Constructors
 
-    public RestaurantMongo(GeoJsonPoint point, String name) {
-        this.point = point;
+    public RestaurantMongo(GeoJsonPoint location, String name) {
+        this.location = location;
         this.name = name;
     }
 
@@ -29,12 +29,12 @@ public class RestaurantMongo {
         return id;
     }
 
-    public GeoJsonPoint getPoint() {
-        return point;
+    public GeoJsonPoint getLocation() {
+        return location;
     }
 
-    public void setPoint(GeoJsonPoint point) {
-        this.point = point;
+    public void setLocation(GeoJsonPoint location) {
+        this.location = location;
     }
 
     public String getName() {
@@ -44,5 +44,5 @@ public class RestaurantMongo {
     public void setName(String name) {
         this.name = name;
     }
-    
+
 }

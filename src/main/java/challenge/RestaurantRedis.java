@@ -17,6 +17,9 @@ public class RestaurantRedis {
 
     // Constructors
 
+    public RestaurantRedis() {
+    }
+
     public RestaurantRedis(String name, Double x, Double y) {
         this.name = name;
         this.x = x;
@@ -27,6 +30,10 @@ public class RestaurantRedis {
 
     public String getId() {
         return id;
+    }
+
+    public void setId( String id) {
+        this.id = id;
     }
 
     public String getName() {
