@@ -46,9 +46,8 @@ public class RestaurantServiceImpl implements RestaurantService {
 		}
 
 		return neighborhoodRedis;
-	}
 
-	// MONGO
+	}
 
 	public NeighborhoodMongo findNeighborhood(double x, double y) {
 		return mongoOperations.findOne(
@@ -61,8 +60,6 @@ public class RestaurantServiceImpl implements RestaurantService {
 				query(where("location").within(neighborhoodMongo.getGeometry())).with(Sort.by("name").ascending()),
 				RestaurantMongo.class);
 	}
-
-	// CONVERTERS
 
 	private List<RestaurantRedis> mongoToRedis(List<RestaurantMongo> restaurantsMongo) {
 		return restaurantsMongo

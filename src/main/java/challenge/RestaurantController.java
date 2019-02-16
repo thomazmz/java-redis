@@ -15,8 +15,8 @@ public class RestaurantController {
 
 	@GetMapping("/restaurants/findInNeighborhood")
 	public NeighborhoodRedis findInNeighborhood(
-			@RequestParam("latitude") Double x,
-			@RequestParam("longitude") Double y) {
+			@RequestParam("x") Double x,
+			@RequestParam("y") Double y) {
 
 		return service.findInNeighborhood(x, y);
 	}
